@@ -1,0 +1,11 @@
+body {
+  transition: all .3s ease;
+}
+
+.box1 {
+	flex: 10 5 400px;
+}
+
+.box2 {
+	flex: 10 5 400px;
+}
