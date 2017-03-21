@@ -1,16 +1,79 @@
+html {
+	box-sizing: border-box;
+}
+
 body {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+	background-color: yellow;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
-.box1 {
-	-webkit-box-flex: 10;
-	    -ms-flex: 10 5 400px;
-	        flex: 10 5 400px;
+box {
+	font-family: sans-serif;
+	margin: 0;
+	background: rgba(0,0,0,0.2);
 }
 
-.box2 {
-	-webkit-box-flex: 10;
-	    -ms-flex: 10 5 400px;
-	        flex: 10 5 400px;
+a {
+	color: white;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background: rgba(0,0,0,0.2);
+	padding: 20px 5px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	-webkit-transition: al 0.5s;
+	transition: al 0.5s;
 }
+
+
+
+a:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+
+/*=======flex container========*/
+
+/*display: flex makes flex container and all items flex items*/
+.flex-nav ul {
+	border: 1px solid black;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	// justify-content: space-between;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	//justify-content: flex-end;
+
+	height: 100px;
+}
+//targeting flex items and distributing evenly across container
+.flex-nav li {
+ 	-webkit-box-flex:3;
+ 	    -ms-flex:3;
+ 	        flex:3;
+ }
+
+
+
+@media all and (max-width:1000px){}
+
+
+@media all and (max-width:500px){}
+
