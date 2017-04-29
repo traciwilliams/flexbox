@@ -1,72 +1,44 @@
-html {
-	box-sizing: border-box;
-}
-
+html,
 body {
-	background-color: yellow;
+	height: 100%;
 }
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
-}
-
-box {
+//activating flexbox, body is the flex container
+//items will be vertical
+body {
+	display: flex; 
+	flex-direction: column;
+	background-color: #fff;
+	margin: 0;
 	font-family: sans-serif;
-	margin: 0;
-	background: rgba(0,0,0,0.2);
+	color: #222;
+	font-size: 0.9em; 
 }
 
-a {
-	color: white;
-	font-weight: 100;
-	letter-spacing: 2px;
-	text-decoration: none;
-	background: rgba(0,0,0,0.2);
-	padding: 20px 5px;
-	display: inline-block;
-	width: 100%;
-	text-align: center;
-	transition: al 0.5s;
-}
-
-
-
-a:hover {
-	background: rgba(0,0,0,0.3);
-}
-
-.wrapper {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 50px;
-}
-
-
-/*=======flex container========*/
-
-/*display: flex makes flex container and all items flex items*/
-.flex-nav ul {
-	border: 1px solid black;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+//GSB - will grow, not shrink, computes initial width automatically
+.main {
+	flex: 1 0 auto; 
 	display: flex;
-	// justify-content: space-between;
-	justify-content: center;
-	//justify-content: flex-end;
-
-	height: 100px;
 }
-//targeting flex items and distributing evenly across container
-.flex-nav li {
- 	flex:3;
- }
 
+aside {
+	flex: 0 0 40px;
+	//display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #f2f2f2;
+}
 
+aside i.fa {
+	font-size: 0.9em;
+}
 
-@media all and (max-width:1000px){}
-
-
-@media all and (max-width:500px){}
+//GSB - won't grow, won't shrink, will stay at 90px
+footer {
+	flex: 0 0 90px; 
+	//height: 35px;
+	padding: 10px;
+	color: #fff;
+	background-color: rgba(61, 100, 158, .9);
+}
 
